@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sender-ms 
+  labels:
+    app: sender-ms 
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sender-ms 
+  template:
+    metadata:
+      labels:
+        app: sender-ms 
+    spec:
+      containers:
+      - image: tektutor/sender:2.0 
+        name: sender-ms 
