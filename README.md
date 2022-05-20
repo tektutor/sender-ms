@@ -13,5 +13,5 @@ oc get po
 
 # Create a clusterip internal service
 ```
-oc expose deploy/sender-ms
+oc expose deploy/sender-ms --port=8080
 ```
